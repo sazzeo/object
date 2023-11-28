@@ -18,7 +18,7 @@ public class Bag {
         return this.ticket != null;
     }
 
-    private boolean hasInvitation() {
+    public boolean hasInvitation() {
         return this.invitation != null;
     }
 
