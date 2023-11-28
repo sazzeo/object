@@ -24,4 +24,10 @@ public class TicketOffice {
     public void minusAmount(Long amount) {
         this.amount -= amount;
     }
+
+    public void sellTicketTo(final Audience audience) {
+        Ticket ticket = this.getTicket();
+        Long amount = audience.buy(ticket);
+        this.minusAmount(amount);
+    }
 }
