@@ -2,12 +2,12 @@ package com.jy.object.movie;
 
 import java.util.List;
 
-public class PercentDiscountPolicy extends DiscountPolicy {
+public class PercentAbstractDiscountPolicy extends AbstractDiscountPolicy {
 
 
     private double percent;
 
-    public PercentDiscountPolicy(final double percent,final List<DiscountCondition> discountConditions) {
+    public PercentAbstractDiscountPolicy(final double percent, final List<DiscountCondition> discountConditions) {
         super(discountConditions);
         this.percent =percent;
     }
