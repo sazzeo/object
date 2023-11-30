@@ -28,7 +28,7 @@ public class MovieTest {
     @DisplayName("할인 정책이 없을때 테스트")
     void 할인_정책이_없을때() {
         Movie 아바타 = new Movie("아바타", Money.wons(12000), Duration.ofMillis(120),
-                null);
+                new NonDiscountPolicy());
 
         Screening screening = new Screening(아바타, 10, LocalDateTime.now());
         Money money = screening.calculateFee(10);
