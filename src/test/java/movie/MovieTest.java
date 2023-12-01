@@ -1,6 +1,9 @@
 package movie;
 
 import com.jy.object.movie.*;
+import com.jy.object.movie.discount.NonAbstractDiscountPolicy;
+import com.jy.object.movie.discount.PercentAbstractDiscountPolicy;
+import com.jy.object.movie.discount.SequenceCondition;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

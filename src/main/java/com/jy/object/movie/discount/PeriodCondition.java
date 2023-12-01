@@ -1,4 +1,7 @@
-package com.jy.object.movie;
+package com.jy.object.movie.discount;
+
+import com.jy.object.movie.DiscountCondition;
+import com.jy.object.movie.Screening;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;

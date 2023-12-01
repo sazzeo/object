@@ -1,6 +1,9 @@
-package com.jy.object.movie;
+package com.jy.object.movie.discount;
 
-public class SequenceCondition implements DiscountCondition{
+import com.jy.object.movie.DiscountCondition;
+import com.jy.object.movie.Screening;
+
+public class SequenceCondition implements DiscountCondition {
 
     private final int sequence;
 

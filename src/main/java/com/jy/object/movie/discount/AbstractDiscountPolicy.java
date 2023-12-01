@@ -1,8 +1,13 @@
-package com.jy.object.movie;
+package com.jy.object.movie.discount;
+
+import com.jy.object.movie.DiscountCondition;
+import com.jy.object.movie.DiscountPolicy;
+import com.jy.object.movie.Money;
+import com.jy.object.movie.Screening;
 
 import java.util.List;
 
-public abstract class AbstractDiscountPolicy implements DiscountPolicy{
+public abstract class AbstractDiscountPolicy implements DiscountPolicy {
 
     private final List<DiscountCondition> discountConditions;
 
