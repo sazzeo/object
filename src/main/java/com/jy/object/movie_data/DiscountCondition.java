@@ -14,9 +14,26 @@ public class DiscountCondition {
         return discountConditionType;
     }
 
+    public boolean isDiscountable(DayOfWeek dayOfWeek, LocalTime time) {
+        if (discountConditionType != DiscountConditionType.PERIOD) {
+            throw new IllegalArgumentException("기간 조건이 아닙니다.");
+        }
+        return this.dayOfWeek.equals(dayOfWeek) &&
+                this.startTime.compareTo(time) <= 0 &&
+                this.endTime.compareTo(time) > 0;
+    }
+
+    public boolean isDiscountable(int sequence) {
+        if (discountConditionType != DiscountConditionType.PERIOD) {
+            throw new IllegalArgumentException("순번 조건이 아닙니다.");
+        }
+        return this.sequence == sequence;
+    }
+
     public void setDiscountConditionType(final DiscountConditionType discountConditionType) {
         this.discountConditionType = discountConditionType;
     }
+
 
     public int getSequence() {
         return sequence;
