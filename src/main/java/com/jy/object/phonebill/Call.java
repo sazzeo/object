@@ -16,4 +16,7 @@ public class Call {
         return Duration.between(from,to);
     }
 
+    public LocalDateTime getFrom() {
+        return from;
+    }
 }
