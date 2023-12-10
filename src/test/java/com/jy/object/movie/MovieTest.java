@@ -1,4 +1,4 @@
-package movie;
+package com.jy.object.movie;
 
 import com.jy.object.movie.*;
 import com.jy.object.movie.discount.*;
@@ -15,8 +15,7 @@ public class MovieTest {
     @Test
     @DisplayName("퍼센트 할인 정책 테스트")
     void test() {
-        Movie 아바타 = new Movie("아바타", Money.wons(12000), Duration.ofMillis(120),
-                new PercentAbstractDiscountPolicy(0.1, List.of(new SequenceCondition(10))));
+        Movie 아바타 = new Factory().createAvartarMovie();
 
         Screening screening = new Screening(아바타, 10, LocalDateTime.now());
         Money money = screening.calculateFee(10);
